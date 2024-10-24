@@ -4,7 +4,10 @@
   "description": "Manage client emails.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.ts",
+    "start": "node ./build/index.js",
+    "build": "tsc -p ."
   },
   "author": "barat-sh",
   "license": "ISC",
@@ -15,7 +18,15 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/punycode": "^2.1.4",
+    "@upstash/redis": "^1.34.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "googleapis": "^144.0.0"
+    "googleapis": "^144.0.0",
+    "nodemon": "^3.1.7",
+    "punycode": "^2.3.1"
   }
 }
